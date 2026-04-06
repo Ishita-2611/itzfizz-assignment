@@ -10,7 +10,7 @@ export default function Hero() {
   const carRef = useRef(null);
   const r1 = useRef(null);
   const r2 = useRef(null);
-  const statsRef = useRef([]);
+  const statsRef = useRef<HTMLDivElement[]>([]);
   const gridRef = useRef(null);
 
   useEffect(() => {
