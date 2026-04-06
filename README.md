@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Itzfizz Digital — Hero Animation
 
-## Getting Started
+A high-performance, scroll-driven hero section built for [Itzfizz Digital](https://itzfizz.in), featuring a GSAP-powered car animation, clip-path text reveals, and dynamic stat popups — all tied to scroll progress.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 [itzfizz-assignment.vercel.app](https://itzfizz-assignment-buey.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- **Scroll-driven car animation** — McLaren drives across the viewport as you scroll, powered by GSAP ScrollTrigger
+- **Clip-path text reveal** — "WELCOME ITZFIZZ" headline reveals letter by letter on scroll
+- **Dynamic stat popups** — 4 metric cards appear/disappear based on car position
+- **Parallax grid background** — subtle perspective motion tied to scroll
+- **Entry animations** — headline and stats fade+slide in on page load
+- **Fully responsive** — fluid `vw`-based sizing across all screen sizes
+- **Dark aesthetic** — deep `#07080a` background with `#d4f542` accent
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Technology | Version | Purpose |
+|---|---|---|
+| Next.js | 16.2.2 | Framework (App Router) |
+| React | 19.2.4 | UI |
+| TypeScript | ^5 | Type safety |
+| Tailwind CSS | ^4 | Utility styling |
+| GSAP + ScrollTrigger | ^3.14.2 | Scroll animations |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
