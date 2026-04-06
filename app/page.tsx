@@ -7,14 +7,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  const carRef = useRef(null);
-  const r1 = useRef(null);
-  const r2 = useRef(null);
-  const statsRef = useRef<HTMLDivElement[]>([]);
+  const carRef = useRef<HTMLImageElement>(null);
+const r1 = useRef<HTMLSpanElement>(null);
+const r2 = useRef<HTMLSpanElement>(null);
+const statsRef = useRef<HTMLDivElement[]>([]);
   const gridRef = useRef(null);
 
   useEffect(() => {
     const car = carRef.current;
+if (!car) return;
 
     // ENTRY
     gsap.from([r1.current, r2.current], {
@@ -70,11 +71,11 @@ export default function Hero() {
       scrub: true,
       onUpdate: (self) => {
         const eased = gsap.parseEase("power4.out")(self.progress);
-        const fast = Math.min(eased * 2, 1);
-        const clip = 100 - fast * 100;
+const fast = Math.min(eased * 2, 1);
+const clip = 100 - fast * 100;
 
-        r1.current.style.clipPath = `inset(0 ${clip}% 0 0)`;
-        r2.current.style.clipPath = `inset(0 ${clip}% 0 0)`;
+if (r1.current) r1.current.style.clipPath = `inset(0 ${clip}% 0 0)`;
+if (r2.current) r2.current.style.clipPath = `inset(0 ${clip}% 0 0)`;
       },
     });
 
@@ -196,7 +197,9 @@ export default function Hero() {
           ].map((item, i) => (
             <div
               key={i}
-              ref={(el) => (statsRef.current[i] = el)}
+             ref={(el) => {
+  if (el) statsRef.current[i] = el;
+}}
               className={`absolute 
                 bg-[#08090b]/90 backdrop-blur-xl
                 border border-[#d4f542]/20
